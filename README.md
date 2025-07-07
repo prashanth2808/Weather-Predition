@@ -1,75 +1,68 @@
-# Weather‑Predition
+Weather Prediction Web Application
+A dynamic full-stack web application that provides real-time weather updates, hourly forecasts, and a 30-day forecast for any city, with an immersive UI that adapts to local time and weather conditions.
 
-A Python‑based weather prediction application that trains a regression model on historical weather data and provides easy-to-use interfaces (CLI and web) for forecasting future temperature and conditions.
+Features
+Displays current weather (temperature, humidity, wind speed, description) for any city using the OpenWeatherMap API.
+Provides hourly weather forecasts (past 12 hours + next 12 hours) and a simulated 30-day forecast.
+Interactive 30-day forecast with clickable days to view detailed hourly data.
+Integrates a Leaflet.js map to show the city's location based on coordinates.
+Dynamic background effects (e.g., rain, snow, sunny, fog, thunder) based on the city's local time and weather conditions.
+Smooth animations for weather effects like falling rain, twinkling stars, and a glowing sun.
+Responsive design optimized for all devices using Tailwind CSS.
+Technologies Used
+Frontend: React.js, Tailwind CSS, Axios, Leaflet.js
+Backend: Flask (Python)
+API: OpenWeatherMap API
+Other: CSS animations, Git for version control
+Installation
+Prerequisites
+Node.js and npm installed
+Python 3.x installed
+An OpenWeatherMap API key (sign up at https://openweathermap.org/)
+Steps
+$ git clone https://github.com/your-username/weather-prediction-web-app.git
+$ cd weather-prediction-web-app
 
----
+Backend Setup
+$ cd backend
+$ pip install -r requirements.txt
+$ set OPENWEATHER_API_KEY=your-api-key  # On Windows
+$ export OPENWEATHER_API_KEY=your-api-key  # On Linux/Mac
+$ python app.py
 
-## 🔍 Table of Contents
+Frontend Setup
+$ cd ../frontend
+$ npm install
+$ npm start
 
-1. [Features](#-features)  
-2. [Tech Stack](#-tech-stack)  
-3. [Getting Started](#-getting-started)  
-   - [Prerequisites](#prerequisites)  
-   - [Installation](#installation)  
-4. [Usage](#-usage)  
-   - [Training the Model](#training-the-model)  
-   - [Making Predictions](#making-predictions)  
-   - [Running the Web App](#running-the-web-app)  
-5. [Project Structure](#-project-structure)  
-6. [Future Improvements](#-future-improvements)  
-7. [License](#-license)  
-8. [Contact](#-contact)  
+Access the App
+Open your browser and go to http://localhost:3000.
+The backend should be running on http://localhost:5000.
+Usage
+Enter a city name in the search bar and click "Get Weather" to fetch data.
+Click on any day in the 30-day forecast to view its hourly breakdown.
+The background and weather effects update dynamically based on the city's local time and conditions.
+Project Structure
+$ tree weather-prediction-web-app/
+weather-prediction-web-app/
+├── backend/          # Flask backend with API routes
+│   ├── app.py        # Main backend file
+│   └── requirements.txt
+├── frontend/         # React frontend
+│   ├── src/
+│   │   ├── App.js    # Main React component
+│   │   └── ...       # Other React files
+│   ├── package.json
+│   └── ...
+├── README.md         # This file
 
----
+Contributing
+Feel free to fork this repository, submit issues, or create pull requests to improve the project. Contributions are welcome!
 
-## ⭐ Features
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- **Data Ingestion & Preprocessing**  
-  Load historical weather datasets, clean missing values, engineer relevant features (e.g., humidity, wind speed).
-
-- **Model Training**  
-  Train and compare regression models (Linear Regression, Random Forest, etc.) to optimize forecast accuracy.
-
-- **Evaluation Metrics**  
-  Calculate MAE, RMSE and \(R^2\) to assess model performance.
-
-- **Prediction Interfaces**  
-  - **CLI**: Quickly get forecasts from the terminal.  
-  - **Web**: Interactive dashboard built with Streamlit (or Flask) for visual forecasts.
-
----
-
-## 🛠️ Tech Stack
-
-- **Python** 3.8+  
-- **pandas**, **numpy** — data handling  
-- **scikit-learn** — model training & evaluation  
-- **matplotlib**, **seaborn** — exploratory plots  
-- **Streamlit** (or **Flask**) — web application  
-- **Git** & **GitHub** — version control & hosting  
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8 or higher  
-- Git  
-
-### Installation
-
-```bash
-# 1. Clone this repo
-git clone https://github.com/prashanth2808/Weather-Predition.git
-cd Weather-Predition
-
-# 2. Create a virtual environment & activate it
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
+Acknowledgments
+Weather data provided by OpenWeatherMap.
+Map integration using Leaflet.js.
+Inspiration from modern weather app designs and animations.

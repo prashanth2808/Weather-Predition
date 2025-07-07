@@ -51,15 +51,6 @@ A dynamic full‑stack web application that provides real‑time weather updates
   CSS animations · Git & GitHub for version control
 
 ---
-
-## 📺 Demo
-
-![Weather App Demo](docs/demo.gif)
-
----
-
-## ⚙️ Installation
-
 ### Prerequisites
 
 - **Node.js** & **npm**  
